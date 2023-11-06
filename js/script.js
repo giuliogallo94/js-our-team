@@ -37,14 +37,6 @@ console.log(members);
 // 2. Stampare le informazioni dei singoli membri
 const rowElem = document.querySelector(".row");
 let membersElems = "";
-let titleMembers = `<div class="col-12">
-<h2 class="mb-3">Our Team</h2>
-<p class="mb-5">
-  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-  Necessitatibus doloremque dicta ipsum labore hic reprehenderit
-  dolorem.
-</p>
-</div>`;
 
 for (let i = 0; i < members.length; i++) {
   const curMember = members[i]; // singolo membro
@@ -68,4 +60,4 @@ for (let i = 0; i < members.length; i++) {
 </div>`;
 }
 
-rowElem.innerHTML = titleMembers + membersElems;
+rowElem.innerHTML += membersElems;
