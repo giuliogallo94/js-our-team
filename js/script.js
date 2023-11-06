@@ -3,32 +3,32 @@ const members = [
   {
     name: "Wayne Barnett",
     role: "Founder & CEO",
-    image: "wayne-barnett-founder-ceo.jpg",
+    image: "img/wayne-barnett-founder-ceo.jpg",
   },
   {
     name: "Angela Caroll",
     role: "Chief Editor",
-    image: "angela-caroll-chief-editor.jpg",
+    image: "img/angela-caroll-chief-editor.jpg",
   },
   {
     name: "Walter Gordon",
     role: "Office Manager",
-    image: "walter-gordon-office-manager.jpg",
+    image: "img/walter-gordon-office-manager.jpg",
   },
   {
     name: "Angela Lopez",
     role: "Social Media Manager",
-    image: "angela-lopez-social-media-manager.jpg",
+    image: "img/angela-lopez-social-media-manager.jpg",
   },
   {
     name: "Scott Estrada",
     role: "Developer",
-    image: "scott-estrada-developer.jpg",
+    image: "img/scott-estrada-developer.jpg",
   },
   {
     name: "Barbara Ramos",
     role: "Graphic Designer",
-    image: "barbara-ramos-graphic-designer.jpg",
+    image: "img/barbara-ramos-graphic-designer.jpg",
   },
 ];
 
@@ -49,18 +49,20 @@ let titleMembers = `<div class="col-12">
 for (let i = 0; i < members.length; i++) {
   const curMember = members[i]; // singolo membro
 
-  membersElems += `<div class="col-5">
+  membersElems += `<div class="col">
   <div class="card" style="width: 18rem">
-    <img src="..." class="card-img-top" alt="..." />
+  
+    <img src="${curMember.image}" class="card-img-top"/>
+
     <div class="card-body">
-      <h5 class="card-title">Name</h5>
-      <p class="card-text">
+      <h5 class="card-title">${curMember.name}</h5>
+      <p class="card-text fw-lighter">
         Lorem, ipsum dolor sit amet consectetur adipisicing elit.
         Placeat recusandae praesentium.
       </p>
     </div>
     <ul class="list-group list-group-flush">
-      <li class="list-group-item">An item</li>
+      <li class="list-group-item fw-bold">${curMember.role}</li>
     </ul>
   </div>
 </div>`;
